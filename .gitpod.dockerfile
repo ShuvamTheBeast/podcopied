@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full:rolling
+FROM gitpod/workspace-full:latest
 USER root
 RUN apt-get update
 RUN apt-get dist-upgrade -y
