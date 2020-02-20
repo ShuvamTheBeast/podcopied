@@ -5,7 +5,6 @@ RUN apt-get dist-upgrade -y
 RUN apt-get install -y neofetch wget curl fish 
 RUN apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 RUN git clone https://github.com/x0rzavi/gitpod_template_repo
-RUN cd gitpod_template_repo
-RUN chmod +x env_setup.sh
-RUN ./env_setup.sh
+RUN chmod a+x gitpod_template_repo/env_setup.sh
+RUN gitpod_template_repo/env_setup.sh
 USER root
