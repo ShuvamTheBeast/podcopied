@@ -11,3 +11,4 @@ steps:
   - neofetch
   - df -h
   - free -h
+  - neofetch
