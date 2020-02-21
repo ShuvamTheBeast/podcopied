@@ -1,0 +1,13 @@
+kind: pipeline
+name: Built Bot
+
+steps:
+- name: ROM
+  image: ubuntu:rolling
+  commands:
+  - sudo apt-get update
+  - sudo apt-get upgrade -y
+  - sudo apt-get install wget curl neofetch -y
+  - neofetch
+  - df -h
+  - free -h
