@@ -3,8 +3,10 @@ name: Built Bot
 
 steps:
 - name: ROM
-  image: ubuntu:rolling
+  image: gitpod/workspace-full:latest
   commands:
+  - sudo -s
+  - whoami
   - apt-get update
   - apt-get dist-upgrade -y
   - apt-get install wget curl neofetch sudo git -y
