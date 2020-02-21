@@ -6,14 +6,14 @@ jobs:
    steps:
       - run:
           command: |
-           apt-get -y update && apt-get -y upgrade && apt-get -y install wget curl git neofetch
+           sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y install wget curl git neofetch
            neofetch
            git config --global user.name "x0rzavi"
            git config --global user.email "x0rzavi@gmail.com"
            git config --global color.ui true
            git clone https://github.com/x0rzavi/gitpod_template_repo
            cd gitpod_template_repo
-           chmod a+x setup.sh
+           sudo chmod a+x setup.sh
            ./setup.sh
            mkdir -p android/lineage
            cd android/lineage
