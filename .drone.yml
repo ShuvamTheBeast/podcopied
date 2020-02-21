@@ -3,11 +3,11 @@ name: Built Bot
 
 steps:
 - name: ROM
-  image: gitpod/workspace-full:latest
+  image: ubuntu:rolling
   commands:
-  - sudo apt-get update
-  - sudo apt-get dist-upgrade -y
-  - sudo apt-get install wget curl neofetch -y
+  - apt-get update
+  - apt-get dist-upgrade -y
+  - apt-get install wget curl neofetch git -y
   - git config --global user.name "x0rzavi"
   - git config --global user.email "x0rzavi@gmail.com"
   - git config --global color.ui true
