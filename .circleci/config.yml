@@ -22,7 +22,7 @@ jobs:
            git clone https://github.com/x0rzavi/android_kernel_xiaomi_msm8917 -b unity --depth=1 kernel/xiaomi/msm8937
            source build/envsetup.sh
            lunch lineage_ugglite-userdebug
-           mka bacon -j16
+           mka bacon -j12
            
 workflows:
   version: 2.1
