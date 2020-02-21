@@ -13,6 +13,7 @@ jobs:
            neofetch
            df -h
            free -h
+           neofetch
 workflows:
   version: 2.1
   cooking:
