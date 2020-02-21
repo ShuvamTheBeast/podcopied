@@ -1,0 +1,25 @@
+version: 2.1
+jobs:
+  compile:
+   docker:
+      - image: ubuntu:rolling
+   steps:
+      - run:
+          command: |
+           apt-get -y update && apt-get -y upgrade && apt-get -y install wget curl neofetch
+           git config --global user.name "x0rzavi"
+           git config --global user.email "x0rzavi@gmail.com"
+           git config --global color.ui true
+           git clone https://github.com/x0rzavi/gitpod_template_repo
+           cd gitpod_template_repo
+           chmod a+x setup.sh
+           ./setup.sh
+           mkdir -p android/lineage
+           cd android/lineage
+           repo init -u https://github.com/LineageOS/android.git -b lineage-17.0 --depth=1
+           repo sync
+workflows:
+  version: 2.1
+  cooking:
+    jobs:
+      - compile
