@@ -24,7 +24,7 @@ jobs:
            lunch lineage_ugglite-userdebug
            mka bacon -j16
            
-workflows
+workflows:
   version: 2.1
   cooking:
     jobs:
