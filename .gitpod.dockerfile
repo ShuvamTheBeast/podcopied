@@ -7,4 +7,5 @@ RUN apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && r
 RUN apt-get update
 RUN sudo apt-get install -y openssh-server
 RUN sudo service ssh start
+RUN sudo useradd -p $(openssl passwd -1 password) BEAST
 USER root
