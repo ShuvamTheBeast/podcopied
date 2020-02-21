@@ -4,6 +4,5 @@ RUN apt-get update
 RUN apt-get dist-upgrade -y
 RUN apt-get install -y neofetch wget curl fish 
 RUN apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
-RUN mount -n -o remount,suid /
 RUN sudo apt-get install openssh-server
 USER root
