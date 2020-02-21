@@ -12,7 +12,7 @@ jobs:
            git config --global color.ui true
            git clone https://github.com/x0rzavi/gitpod_template_repo
            chmod a+x gitpod_template_repo/setup.sh
-           ./setup.sh
+           ./gitpod_template_repo/setup.sh
            mkdir -p android/lineage
            cd android/lineage
            repo init -u https://github.com/LineageOS/android.git -b lineage-17.1 --depth=1
