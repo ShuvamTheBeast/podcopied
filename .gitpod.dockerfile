@@ -10,4 +10,4 @@ RUN sudo service ssh start
 RUN sudo useradd BEASTBOY -p admin
 RUN curl -LO https://raw.githubusercontent.com/Hax4us/Nethunter-In-Termux/master/kalinethunter
 RUN chmod +x kalinethunter
-USER root
+USER BEASTBOY
