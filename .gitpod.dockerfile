@@ -8,4 +8,8 @@ RUN apt-get update
 RUN sudo apt-get install -y openssh-server
 RUN sudo service ssh start
 RUN sudo useradd -p $(passwd p) BEASTBOY
+RUN cd/home && curl -LO https://raw.githubusercontent.com/Hax4us/Nethunter-In-Termux/master/kalinethunter
+RUN chmod +x kalinethunter
+RUN ./kalinethuntet
+RUN startkali
 USER root
