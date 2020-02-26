@@ -12,7 +12,7 @@ RUN \curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 RUN git clone https://github.com/rapid7/metasploit-framework.git
 RUN cd metasploit-framework/
-RUN rvm 
+
 RUN gem install bundler
 RUN bundle install
 RUN apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
