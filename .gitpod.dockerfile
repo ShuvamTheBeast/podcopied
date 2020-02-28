@@ -2,6 +2,8 @@ FROM gitpod/workspace-full:latest
 USER root
 RUN apt-get update
 RUN apt-get dist-upgrade -y
-RUN apt-get install -y docker
-RUN apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
+RUN sudo apt-get remove docker docker-engine docker.io
+RUN sudo apt install docker.io
+RUN sudo systemctl start docker
+RUN sudo systemctl enable docker
 USER ROOT
