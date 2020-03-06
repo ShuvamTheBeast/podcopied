@@ -9,6 +9,5 @@ RUN apt-get install wget tor openssl -y
 
 RUN apt-get install crunch -y
 RUN git clone https://github.com/thelinuxchoice/instashell  ~/gitpod/podcopied
-RUN chmod +x ~/gitpod/podcopied/instashell/instashell.sh && chmod +x ~/gitpod/podcopied/instashell/install.sh
-RUN su ~/gitpod/podcopied/./install.sh
+
 USER gitpod
