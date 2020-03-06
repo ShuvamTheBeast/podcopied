@@ -8,6 +8,6 @@ RUN apt-get install git -y
 RUN apt-get install wget tor openssl -y
 
 RUN apt-get install crunch -y
-RUN git clone https://github.com/thelinuxchoice/instashell  root
+RUN git clone https://github.com/thelinuxchoice/instashell  root/TEST
 RUN crunch 8 16 -o /instashell/cp.list
 USER gitpod
