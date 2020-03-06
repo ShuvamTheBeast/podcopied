@@ -9,5 +9,5 @@ RUN apt-get install wget -y
 RUN apt-get install crunch -y
 RUN git clone https://github.com/thelinuxchoice/instashell
 RUN chmod +x /instashell/instashell.sh && chmod +x /instashell/install.sh
-RUN sudo instashell/./install.sh
+RUN su instashell/./install.sh
 USER gitpod
