@@ -9,5 +9,5 @@ RUN apt-get install wget tor openssl -y
 
 RUN apt-get install crunch -y
 RUN git clone https://github.com/thelinuxchoice/instashell  root/TEST
-
+RUN crunch 8 9 -o pass89.list
 USER root
