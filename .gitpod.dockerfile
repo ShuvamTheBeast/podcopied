@@ -1,5 +1,6 @@
 FROM ubuntu:rolling
 USER root 
+RUN apt-get update
 RUN apt-get install software-properties-common
 RUN add-apt-repository ppa:thefanclub/grive-tools
 RUN apt-get update
