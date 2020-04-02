@@ -7,7 +7,7 @@ WORKDIR /opt
 curl https://www.swag.uwaterloo.ca/bash2py/downloads/3.6/bash2py-3.6.zip /opt
 RUN unzip /opt/bash2py-3.6.zip 
 WORKDIR /opt/bash2py-3.6
-COPY test.py /opt/bash2py-3.6
+COPY test.sh /opt/bash2py-3.6
 RUN mkdir /root/bin
 RUN sh install
 CMD /bin/bash
