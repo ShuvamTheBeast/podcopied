@@ -7,6 +7,7 @@ WORKDIR /opt
 COPY bash2py-3.5.zip /opt
 RUN unzip /opt/bash2py-3.5.zip 
 WORKDIR /opt/bash2py-3.5
+COPY test.py /opt/bash2py-3.5
 RUN mkdir /root/bin
 RUN sh install
 CMD /bin/bash
